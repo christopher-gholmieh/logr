@@ -1,0 +1,36 @@
+[
+  {
+    "arguments": [
+      "/sbin/gcc",
+      "-c",
+      "-Iinclude/",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-o",
+      "logr",
+      "source/json.c"
+    ],
+    "directory": "/home/christopherg/Repositories/logr",
+    "file": "/home/christopherg/Repositories/logr/source/json.c",
+    "output": "/home/christopherg/Repositories/logr/logr"
+  },
+  {
+    "arguments": [
+      "/sbin/gcc",
+      "-c",
+      "-Iinclude/",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-o",
+      "logr",
+      "main.c"
+    ],
+    "directory": "/home/christopherg/Repositories/logr",
+    "file": "/home/christopherg/Repositories/logr/main.c",
+    "output": "/home/christopherg/Repositories/logr/logr"
+  }
+]

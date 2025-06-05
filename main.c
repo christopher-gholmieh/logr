@@ -87,7 +87,7 @@ char** parse_argument_vector(int argument_count, char* argument_vector[]) {
     size_t argument_vector_length = 0;
 
     // Logic:
-    for (size_t iterator = 1; iterator < argument_count; iterator++) {
+    for (int iterator = 1; iterator < argument_count; iterator++) {
         if (access(argument_vector[iterator], F_OK) == 0) {
             parsed_argument_vector[argument_vector_length] = argument_vector[iterator];
 
