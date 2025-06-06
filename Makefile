@@ -3,7 +3,7 @@
 COMPILER_INCLUDE=-Iinclude/
 
 # Source:
-COMPILER_SOURCE=source/logr_arguments.c source/logr_hashmap.c source/logr_logger.c source/logr_json.c
+COMPILER_SOURCE=source/logr_arguments.c source/logr_inotify.c source/logr_hashmap.c source/logr_logger.c source/logr_json.c
 
 # Output:
 COMPILER_OUTPUT=-o logr
