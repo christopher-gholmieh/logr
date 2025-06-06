@@ -1,6 +1,5 @@
 // Written by: Christopher Gholmieh
 // Macros:
-
 #define MAXIMUM_BUFFER_CAPACITY 4096
 #define MAXIMUM_ARGUMENT_CAPACITY 5
 
@@ -13,6 +12,10 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+
+#include "logr_arguments.h"
+#include "logr_hashmap.h"
+#include "logr_logger.h"
 
 #include <signal.h>
 #include <string.h>
@@ -30,77 +33,6 @@ typedef struct {
 } logr_information;
 
 // Functions:
-void logr_log_information(char* message) {
-    // Variables (Assignment):
-    // Buffer:
-    char buffer[512];
-
-    // Logic:
-    snprintf(buffer, sizeof(buffer), "\033[1;32m[LOGR] [INFO]: \033[0m%s\n", message);
-
-    fprintf(stdout, "%s", buffer);
-}
-
-void logr_log_warning(char* message) {
-    // Variables (Assignment):
-    // Buffer:
-    char buffer[512];
-
-    // Logic:
-    snprintf(buffer, sizeof(buffer), "\033[1;33m[LOGR] [WARNING]: \033[0m%s\n", message);
-
-    fprintf(stderr, "%s", buffer);
-}
-
-void logr_log_error(char* message) {
-    // Variables (Assignment):
-    // Buffer:
-    char buffer[512];
-
-    // Logic:
-    snprintf(buffer, sizeof(buffer), "\033[1;31m[LOGR] [ERROR]: \033[0m%s\n", message);
-
-    fprintf(stderr, "%s", buffer);
-}
-
-void* allocate_memory(size_t size) {
-    // Variables (Assignment):
-    // Pointer:
-    void* pointer = malloc(size);
-
-    // Logic:
-    if (pointer == NULL) {
-        fprintf(stderr, "[!] Error allocating memory.\n");
-
-        exit(EXIT_FAILURE);
-    }
-
-    return pointer;
-}
-
-char** parse_argument_vector(int argument_count, char* argument_vector[]) {
-    // Variables (Assignment):
-    // Output:
-    char** parsed_argument_vector = (char**) allocate_memory(sizeof(char*) * (MAXIMUM_ARGUMENT_CAPACITY + 1));
-
-    // Length:
-    size_t argument_vector_length = 0;
-
-    // Logic:
-    for (int iterator = 1; iterator < argument_count; iterator++) {
-        if (access(argument_vector[iterator], F_OK) == 0) {
-            parsed_argument_vector[argument_vector_length] = argument_vector[iterator];
-
-            argument_vector_length++;
-        }
-    }
-
-    parsed_argument_vector[argument_vector_length] = NULL;
-
-    // Logic:
-    return parsed_argument_vector;
-}
-
 logr_information apply_modifier_monitors(int file_descriptor, char** parsed_argument_vector) {
     // Variables (Assignment):
     // Descriptors:

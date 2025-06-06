@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "json.h"
+#include "logr_json.h"
 
 // Functions:
 logr_json_node* logr_json_create_dictionary(void) {

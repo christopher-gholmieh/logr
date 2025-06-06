@@ -10,10 +10,61 @@
       "-Werror",
       "-o",
       "logr",
-      "source/json.c"
+      "source/logr_arguments.c"
     ],
     "directory": "/home/christopherg/Repositories/logr",
-    "file": "/home/christopherg/Repositories/logr/source/json.c",
+    "file": "/home/christopherg/Repositories/logr/source/logr_arguments.c",
+    "output": "/home/christopherg/Repositories/logr/logr"
+  },
+  {
+    "arguments": [
+      "/sbin/gcc",
+      "-c",
+      "-Iinclude/",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-o",
+      "logr",
+      "source/logr_hashmap.c"
+    ],
+    "directory": "/home/christopherg/Repositories/logr",
+    "file": "/home/christopherg/Repositories/logr/source/logr_hashmap.c",
+    "output": "/home/christopherg/Repositories/logr/logr"
+  },
+  {
+    "arguments": [
+      "/sbin/gcc",
+      "-c",
+      "-Iinclude/",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-o",
+      "logr",
+      "source/logr_logger.c"
+    ],
+    "directory": "/home/christopherg/Repositories/logr",
+    "file": "/home/christopherg/Repositories/logr/source/logr_logger.c",
+    "output": "/home/christopherg/Repositories/logr/logr"
+  },
+  {
+    "arguments": [
+      "/sbin/gcc",
+      "-c",
+      "-Iinclude/",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-o",
+      "logr",
+      "source/logr_json.c"
+    ],
+    "directory": "/home/christopherg/Repositories/logr",
+    "file": "/home/christopherg/Repositories/logr/source/logr_json.c",
     "output": "/home/christopherg/Repositories/logr/logr"
   },
   {
